@@ -18,8 +18,6 @@
     
 
     
-      <link rel="stylesheet" href="/css/custom.css">
-    
 
     
       
@@ -113,7 +111,32 @@
     <main class="pb7" role="main">
       
   <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
+    <p>This page is under development</p>
+<h1 id="context">Context</h1>
+<p>Low level graphics APIs are the future of graphics programing. The next-generation of graphics APIs, considing mainly of <a href="https://www.khronos.org/vulkan/">Vulkan</a>,
+<a href="https://en.wikipedia.org/wiki/DirectX">DirectX 12</a>, and <a href="https://developer.apple.com/metal/">Metal</a>, are all designed to be much faster, utilize
+all the capabilities of newer GPUs and CPUs, and provide many more features than older apis like <a href="https://www.opengl.org/">OpenGL</a> and
+<a href="https://en.wikipedia.org/wiki/DirectX">DirectX 11</a>. These APIs are capable of tens of millions of drawcalls per second and give access to new technology
+like <a href="https://developer.nvidia.com/blog/vulkan-raytracing/">Real-time Raytracing</a>.</p>
+<h1 id="motivation">Motivation</h1>
+<p>The downsides? These new apis are many times more verbose and lower level than anything before them. To prevent bottlenecks caused by tracking resources
+and syncronising operations on the GPU, these APIs shift a lot of work back to the graphics developer. This means that writing pure Vulkan code (for instance)
+is a very long, tedious, bug-ridden and frustrating task. A very simple Hello Triangle example, that woud take maybe 50 lines of code to write in OpenGL, takes
+more than <a href="https://vulkan-tutorial.com/code/16_swap_chain_recreation.cpp">1000 lines</a> in Vulkan. So what can be done? How can this new technology
+be accessed and used without driving programmers insane?</p>
+<h1 id="quantum-gfx">Quantum GFX</h1>
+<p>The various Quantum GFXs projects attempt to find a solution to this question. Currently only <a href="">QuantumVk</a> has been developed and tested. These projects are
+essentially middle-ware wrappers around Vulkan, DirectX, and Metal. The idea behind these projects is to allow these graphics APIs to be accessed at a higher
+level whilst sacrificing as little speed and flexibility as possible. For this reason all API native functionality is exposed to the user (meaning you can
+retrieve native handles from each project and manipulate them how you would in the native API). These means that when using QuantumVk (for example) you can
+program an entire application without making a single Vulkan call, or you can only use QuantumVk for initialization and use raw Vulkan for running commands,
+or you can do a mixture of both).</p>
+<h2 id="quantumvk">QuantumVk</h2>
+<p>QuantumVk is currently the only developed project within Quantum GFX. It provides a middle-ware solution for <a href="https://www.khronos.org/vulkan/">Vulkan</a>.
+Vulkan is very widely supported and QuantumVk takes advantage of this. The same QuantumVk project can (theoretically) run on: Windows, Linux, Andriod,
+Mac OSX, iOS, and iPad OS (the last three via <a href="https://github.com/KhronosGroup/MoltenVK">MoltenVk</a>). Only Windows has been tested so far but the other
+platforms are currently being worked on.</p>
+
   </article>
   
   
