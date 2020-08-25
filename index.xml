@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum GFX</title>
-    <link>http://quantumgraphics.github.io/</link>
+    <link>http://quantumgfx.github.io/</link>
     <description>Recent content on Quantum GFX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Aug 2020 12:10:56 -0600</lastBuildDate>
     
-	<atom:link href="http://quantumgraphics.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://quantumgfx.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
